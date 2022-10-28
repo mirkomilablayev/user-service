@@ -1,0 +1,23 @@
+server:
+  port: 7777
+  address: localhost
+spring:
+   liquibase:
+    change-log: classpath:db/changelog/master.xml
+    url: jdbc:postgresql://localhost:5433/user_service_ms_db
+    user: ${database.username}
+    password: ${database.password}
+   r2dbc:
+    url: r2dbc:postgresql://localhost:5433/user_service_ms_db
+    username: ${database.username}
+    password: ${database.password}
+database:
+  name: user_service_ms_db
+  host: localhost
+  port: 5433
+  username: postgres
+  password: root123
+
+
+
+
